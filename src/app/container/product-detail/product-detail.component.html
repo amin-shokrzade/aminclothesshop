@@ -1,0 +1,78 @@
+<div class="aminClothesShop--product--details--info scroll">
+  <div class="aminClothesShop-product-detail-close">
+    <i class="fa fa-times" aria-hidden="true"></i>
+  </div>
+  <div class="aminClothesShop-product-detail-image">
+    <img [src]="product.imageURL" class="aminClothesShop-product-detail-image" />
+  </div>
+
+  <div class="aminClothesShop-product-detail">
+    <div class="aminClothesShop-product-detail-name">
+      <h2>{{ product.name }}</h2>
+    </div>
+    <div class="aminClothesShop-product-detail-gbc">
+      <span>MEN</span>
+      <span>JOJO</span>
+      <span>SUMMER</span>
+    </div>
+    <div class="aminClothesShop-product-detail-price">
+      <p>
+        <b>Price Each:</b>
+        <span style="background-color: red; color: white"><s>$699</s></span>
+        <span style="background-color: green; color: white">$599</span>
+        (No taxes)
+      </p>
+    </div>
+    <div class="aminClothesShop-product-detail-size">
+      <div style="padding: 5px 0px; border-bottom: #ccc 2px solid">
+        <h4>Available Size</h4>
+      </div>
+      <diV style="margin-top: 20px">
+        <span class="aminClothesShop-product-detail-available-size">6</span>
+        <span class="aminClothesShop-product-detail-available-size">7</span>
+        <span class="aminClothesShop-product-detail-available-size">8</span>
+        <span class="aminClothesShop-product-detail-available-size">9</span>
+      </diV>
+    </div>
+
+    <div class="aminClothesShop-product-detail-color">
+      <div style="padding: 5px 0px; border-bottom: #ccc 2px solid">
+        <h4>Available Color</h4>
+      </div>
+      <diV style="margin-top: 20px">
+        <span
+          class="aminClothesShop-product-detail-available-color"
+          style="background-color: red"
+        ></span>
+        <span
+          class="aminClothesShop-product-detail-available-color"
+          style="background-color: green"
+        ></span>
+        <span
+          class="aminClothesShop-product-detail-available-color"
+          style="background-color: black"
+        ></span>
+        <span
+          class="aminClothesShop-product-detail-available-color"
+          style="background-color: blue"
+        ></span>
+      </diV>
+    </div>
+
+    <div class="aminClothesShop-product-detail-desc">
+      <div style="padding: 5px 0px; border-bottom: #ccc 2px solid">
+        <h4>Product Description</h4>
+      </div>
+      <div style="margin-top: 20px">
+        <p>DESCRIPTION</p>
+      </div>
+    </div>
+  </div>
+  <div class="aminClothesShop-product-detail-addtoCart">
+    <button class="btn-add-to-cart" *ngIf="product.is_in_inventory else notifyMe">ADD TO CART</button>
+    <ng-template #notifyMe>
+    <button class="btn-add-to-cart">NotifyMe</button>
+  </ng-template>
+  </div>
+</div>
+<div class="overlay"></div>

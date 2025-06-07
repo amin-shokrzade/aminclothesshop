@@ -1,0 +1,16 @@
+<app-filter
+  [all]="totalProductsCount"
+  [inStock]="totalProductsInStock"
+  [outOfStock]="totalProductsNotInStock"
+  (selectedFilterRadioButtonChanged)="onFilterChanged($event)"
+></app-filter>
+
+<div class="aminClothesShop--products--container">
+  <ng-container *ngFor="let prod of products" >
+    <app-product
+      [product]="prod"
+      *ngIf="searchText === '' || prod.name.toLowerCase().includes(searchText)"
+      (click)="selectedProduct = prod"
+    ></app-product>
+  </ng-container>
+</div>

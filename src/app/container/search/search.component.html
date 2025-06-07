@@ -1,0 +1,9 @@
+<div class="aminClothesShop--search--product">
+  <input class="aminClothesShop-search-product-input" #searchInputText />
+  <button class="btn btn-search" (click)="updateSearchText()">Search</button>
+</div>
+<div class="-search-result-for">
+  <p *ngIf="searchText != ''">
+    <strong>Search result for:</strong> {{ searchText }}
+  </p>
+</div>

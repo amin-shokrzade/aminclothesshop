@@ -1,0 +1,37 @@
+.aminClothesShop--search--product {
+  margin: 20px auto;
+  text-align: center;
+}
+.aminClothesShop-search-product-input {
+  width: 40%;
+  height: 3.3vh;
+  padding: 1px 10px;
+  outline: none;
+  border-radius: 2px;
+  background-color: #efefef;
+  border: #28282b 1px solid;
+}
+
+.btn {
+  padding: 5px 10px;
+  border: none;
+}
+.btn-search {
+  padding: 9.5px 30px;
+  background-color: #28282b;
+  margin-left: 10px;
+  color: #fff;
+  height: 45px;;
+}
+.btn-search-disabled {
+  padding: 9.5px 30px;
+  background-color: #aaa;
+  margin-left: -1px;
+  color: #999;
+  border: #aaa 1px solid;
+  cursor: not-allowed;
+}
+.aminClothesShop-search-result-for {
+  margin: 20px auto;
+  padding: 10px 140px;
+}

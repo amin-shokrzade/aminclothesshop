@@ -1,0 +1,32 @@
+<div class="aminClothesShop--product--container">
+  <app-search (searchTextChanged)="setSearchText($event)"></app-search>
+  <app-product-list
+    [searchText]="searchText"
+    #productListComponent
+  ></app-product-list>
+  <app-product-detail
+    *ngIf="productListComponent.selectedProduct"
+    [productListComp]="productListcomponent"
+  ></app-product-detail>
+  <div class="aminClothesShop-featured-products">
+    <div class="aminClothesShop-featured-product-heading">
+        <h1>Latest Arrival in Pupolar Brands</h1>
+
+    </div>
+  <featured-products>
+    <h3 class="title">New Arrivals in JOJO</h3>
+    <button class="call-to-action">Learn More JOJO</button>
+  </featured-products>
+  <featured-products>
+    <h3 class="title">New Arrivals in VITON</h3>
+    <button class="call-to-action">Learn More Kids</button>
+
+  </featured-products>
+  <featured-products>
+    <h3 class="title">New Arrivals in Puma</h3>
+    <button class="call-to-action">Learn More Puma</button>
+
+  </featured-products>
+
+
+</div>

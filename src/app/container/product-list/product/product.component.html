@@ -1,0 +1,33 @@
+<div class="aminClothesShop--product--item">
+  <div class="aminClothesShop-wishlist-sale-container">
+    <div class="aminClothesShop--add--to--wishlist">
+      <i class="fa fa-star-o" aria-hidden="true"></i>
+    </div>
+    <div class="aminClothesShop-on-sale-tag" *ngIf="product.discountPrice">
+      {{ (100 - (product.discountPrice / product.price) * 100).toFixed(0) }}%
+      DISCOUNT
+    </div>
+  </div>
+  <div class="aminClothesShop--product--image">
+    <img [src]="product.imageURL" class="aminClothesShop--product--image" />
+  </div>
+  <div class="aminClothesShop--add--to--price">{{ product.price }} $</div>
+  <div class="aminClothesShop--product--name">{{ product.name }}</div>
+  <div class="aminClothesShop--product--category">
+    {{ product.gender }} . {{ product.category }} . {{ product.brand }}
+  </div>
+  <div class="aminClothesShop--product--available-colors">
+    {{ product.color.length }} Colors . Best Seller
+  </div>
+  <div
+    class="aminClothesShop--product--in--stock"
+    [ngStyle]="{
+      fontWeight: 'bold',
+      color: product.is_in_inventory ? 'green' : 'red'
+    }"
+  >
+    {{
+      product.is_in_inventory ? "Availabe" : "Not Available"
+    }}
+  </div>
+</div>
